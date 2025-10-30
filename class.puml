@@ -1,0 +1,18 @@
+@startuml
+
+class student {
+    - studentid : string 
+    + name : string 
+    + borrows() : void
+}
+class book {
+    - title : string 
+    # bookno : string 
+    + getbookinfo() : string
+}
+
+student "many" --o "1" book
+
+@enduml
+
+

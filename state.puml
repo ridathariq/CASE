@@ -1,0 +1,9 @@
+@startuml
+
+[*] --> login : start
+state login : user login 
+login --> [*] : login failed
+
+
+@enduml
+

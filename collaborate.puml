@@ -1,0 +1,21 @@
+@startuml
+
+title student course registeration
+
+left to right direction
+
+actor student 
+actor system 
+actor instructor 
+actor registeration 
+actor course 
+node notification 
+node payment 
+node studentprof 
+student -> studentprof : verify studentprof
+student -> system : request for course registeration 
+
+
+@enduml
+
+

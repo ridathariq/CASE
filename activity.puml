@@ -1,0 +1,13 @@
+@startuml
+
+(*) --> "initialization" 
+--> "firststep"
+if "some test" then 
+--> [true] "some action" 
+--> "next" 
+--> (*)
+else 
+--> [false] "another step"
+
+endif
+@enduml

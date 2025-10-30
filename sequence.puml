@@ -1,0 +1,26 @@
+@startuml
+
+actor driver 
+activate driver 
+
+driver -> videocapture : captureVideo()
+activate videocapture 
+videocapture -> videocapture : analyzeframe()
+activate videocapture 
+videocapture -> videocapture : detecteyeblink()
+deactivate videocapture 
+videocapture -> drowsinesssystem 
+activate drowsinesssystem
+drowsinesssystem --> drowsinesssystem : drowsidetected 
+
+alt drowsinessdetection
+
+drowsinesssystem -> notification 
+activate notification 
+notification -> notification :notify() 
+deactivate notification 
+else no drowsiness 
+drowsinesssystem --> drowsinesssystem : notdetected
+end
+@enduml
+

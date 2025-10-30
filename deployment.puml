@@ -1,0 +1,26 @@
+@startuml
+
+title deployment 
+
+node "user device" {
+    [web browser]
+} 
+node "web server" {
+    [exam registeration]
+}
+cloud "network" {
+    node "instance" {
+        [application stack]
+    } 
+}
+artifact "registeration" {
+    folder "data"
+}
+frame "monitoring" {
+    database "system log"
+}
+[web browser] --> [exam registeration]
+[registeration] --> [data]
+
+@enduml
+

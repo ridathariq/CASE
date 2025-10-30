@@ -1,0 +1,17 @@
+@startuml
+
+package "atm system" {
+    [atm machine] --> [card reader]
+    [atm machine] --> [keypad]
+    [atm machine] --> [receipt]
+    [atm machine] --> [cash]
+}
+
+package "bank" {
+    [bank server]
+}
+[atm system] --> [bank server]
+
+
+
+@enduml
